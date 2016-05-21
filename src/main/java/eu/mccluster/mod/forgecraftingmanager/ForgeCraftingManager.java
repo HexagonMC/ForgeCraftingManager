@@ -10,6 +10,8 @@ import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;
 
 
 @Mod(
@@ -43,5 +45,11 @@ public class ForgeCraftingManager
             if (output != null)
             	System.out.println("Recipe: " + output.getDisplayName());
         }
+    }
+    
+    @SubscribeEvent
+    public void itemCrafted(ItemCraftedEvent event)
+    {
+    	System.out.println("Output : " + event.crafting.getDisplayName());
     }
 }
