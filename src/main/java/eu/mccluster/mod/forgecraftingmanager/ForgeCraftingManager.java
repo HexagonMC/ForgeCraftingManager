@@ -40,7 +40,8 @@ public class ForgeCraftingManager
             if (recipe == null)
              continue;
             ItemStack output = recipe.getRecipeOutput();
-            System.out.println("Recipe: " + output.getDisplayName());
+            if (output != null)
+            	System.out.println("Recipe: " + output.getDisplayName());
         }
     }
 }
