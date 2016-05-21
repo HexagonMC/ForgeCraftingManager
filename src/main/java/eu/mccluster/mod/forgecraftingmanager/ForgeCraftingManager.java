@@ -40,6 +40,31 @@ public class ForgeCraftingManager
         forbiddenrecipes.add("Thunder Stone Shovel");
         forbiddenrecipes.add("Thunder Stone Hoe");
         forbiddenrecipes.add("Thunder Stone Sword");
+        forbiddenrecipes.add("Aqua Helmet");
+        forbiddenrecipes.add("Aqua Chestplate");
+        forbiddenrecipes.add("Aqua Leggings");
+        forbiddenrecipes.add("Aqua Boots");
+        forbiddenrecipes.add("Galactic Swag");
+        forbiddenrecipes.add("Galactic Chestplate");
+        forbiddenrecipes.add("Galactic Leggings");
+        forbiddenrecipes.add("Galactic Boots");
+        forbiddenrecipes.add("Magma Helmet");
+        forbiddenrecipes.add("Magma Chestplate");
+        forbiddenrecipes.add("Magma Leggings");
+        forbiddenrecipes.add("Magma Boots");
+        forbiddenrecipes.add("Neo Plasma Helmet");
+        forbiddenrecipes.add("Neo Plasma Chestplate");
+        forbiddenrecipes.add("Neo Plasma Leggings");
+        forbiddenrecipes.add("Neo Plasma Boots");
+        forbiddenrecipes.add("Plasma Helmet");
+        forbiddenrecipes.add("Plasma Chestplate");
+        forbiddenrecipes.add("Plasma Leggings");
+        forbiddenrecipes.add("Plasma Boots");
+        forbiddenrecipes.add("Rocket Helmet");
+        forbiddenrecipes.add("Rocket Chestplate");
+        forbiddenrecipes.add("Rocket Leggings");
+        forbiddenrecipes.add("Rocket Boots");
+        
         
         Iterator<IRecipe> iterator = CraftingManager.getInstance().getRecipeList().iterator();
 
