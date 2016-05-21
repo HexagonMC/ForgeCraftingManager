@@ -4,6 +4,7 @@ stages:
 deploy:
   stage: deploy
   script:
+    - chmod +x gradlew
     - ./gradlew setupCiWorkspace
     - ./gradlew build
   only:
