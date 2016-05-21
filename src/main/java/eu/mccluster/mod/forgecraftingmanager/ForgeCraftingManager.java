@@ -6,6 +6,7 @@ import java.util.Iterator;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.FMLLog;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -34,7 +35,7 @@ public class ForgeCraftingManager
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
-        FMLLog.info("Starting inject of Pixelmons economy system with the one from Sponge");
+        MinecraftForge.EVENT_BUS.register(INSTANCE);
         Iterator<IRecipe> iterator = CraftingManager.getInstance().getRecipeList().iterator();
         while (iterator.hasNext())
         {
@@ -43,7 +44,12 @@ public class ForgeCraftingManager
              continue;
             ItemStack output = recipe.getRecipeOutput();
             if (output != null)
-            	System.out.println("Recipe: " + output.getDisplayName());
+            {
+            	if(output.getDisplayName().contains("Pickaxe"))
+            	{
+            		iterator.remove();
+            	}
+            }
         }
     }
     
