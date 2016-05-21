@@ -23,8 +23,8 @@ plugins {
 }
 */
 version = "1.0"
-group= "eu.mccluster.mod.pixelmonpt" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "PixelmonPt"
+group= "eu.mccluster.mod.forgecraftingmanager" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "ForgeCraftingManager"
 
 minecraft {
     version = "1.8.9-11.15.1.1722"
