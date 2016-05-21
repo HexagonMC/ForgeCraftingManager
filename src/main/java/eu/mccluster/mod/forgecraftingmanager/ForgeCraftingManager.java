@@ -53,7 +53,6 @@ public class ForgeCraftingManager
     	{
     		if(event.crafting != null && event.crafting.getDisplayName() != null && forbiddenrecipes.contains(event.crafting.getDisplayName()))
     		{
-    			event.setCanceled(true);
     			event.setResult(Result.DENY);
     		}
     	}
