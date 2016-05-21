@@ -1,13 +1,13 @@
 [
 {
-  "modid": "pixelmonpt",
-  "name": "Pixelmon Pt",
-  "description": "Pixelmon Pt bridge",
+  "modid": "forgecraftingmanager",
+  "name": "ForgeCraftingManager",
+  "description": "Crafting Manager for Forge",
   "version": "1.0",
   "mcversion": "1.8.9",
   "url": "",
   "updateUrl": "",
-  "authorList": ["Zartec"],
+  "authorList": ["ghac"],
   "credits": "",
   "logoFile": "",
   "screenshots": [],
