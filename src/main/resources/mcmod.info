@@ -1,0 +1,16 @@
+[
+{
+  "modid": "pixelmonpt",
+  "name": "Pixelmon Pt",
+  "description": "Pixelmon Pt bridge",
+  "version": "1.0",
+  "mcversion": "1.8.9",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Zartec"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

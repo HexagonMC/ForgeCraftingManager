@@ -1,0 +1,16 @@
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  script:
+    - ./gradlew setupCiWorkspace
+    - ./gradlew build
+  only:
+  - master
+  - tags
+  tags:
+    - Java8
+  artifacts:
+    paths:
+    - "build/libs/ForgeCraftingManager*.jar"
