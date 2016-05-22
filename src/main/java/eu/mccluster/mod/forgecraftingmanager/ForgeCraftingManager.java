@@ -34,12 +34,19 @@ public class ForgeCraftingManager
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
-        forbiddenrecipes.add("pixelmon:ThunderstonePickaxe");
+        forbiddenrecipes.add("pixelmon:ThunderstoneHammer");
         forbiddenrecipes.add("pixelmon:ThunderstonePickaxe");
         forbiddenrecipes.add("pixelmon:ThunderstoneAxe");
         forbiddenrecipes.add("pixelmon:ThunderstoneShovel");
         forbiddenrecipes.add("pixelmon:ThunderstoneHoe");
         forbiddenrecipes.add("pixelmon:ThunderstoneSword");
+        
+        forbiddenrecipes.add("pixelmon:FirestoneHammer");
+        forbiddenrecipes.add("pixelmon:FirestonePickaxe");
+        forbiddenrecipes.add("pixelmon:FirestoneAxe");
+        forbiddenrecipes.add("pixelmon:FirestoneShovel");
+        forbiddenrecipes.add("pixelmon:FirestoneHoe");
+        forbiddenrecipes.add("pixelmon:FirestoneSword");
         
         forbiddenrecipes.add("pixelmon:SapphireHelm");
         forbiddenrecipes.add("pixelmon:SapphirePlate");
