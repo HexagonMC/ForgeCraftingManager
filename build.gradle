@@ -74,7 +74,7 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
-	provided 'org.spongepowered:spongeapi:5.0.0'
+	provided 'org.spongepowered:spongeapi:5.0.0-SNAPSHOT'
 }
 
 processResources
