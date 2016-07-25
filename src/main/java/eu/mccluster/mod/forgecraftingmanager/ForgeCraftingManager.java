@@ -17,7 +17,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
         version = ForgeCraftingManager.VERSION,
         dependencies = "required-after:pixelmon;required-after:sponge",
         acceptableRemoteVersions = "*",
-        acceptedMinecraftVersions = "[1.8.9]")
+        acceptedMinecraftVersions = "[1.10.2]")
 public class ForgeCraftingManager
 {
     public static final String  NAME    = "ForgeCraftingManager";
