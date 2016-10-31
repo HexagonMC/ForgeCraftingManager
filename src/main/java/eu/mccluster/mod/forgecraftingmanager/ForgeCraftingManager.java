@@ -92,6 +92,5 @@ public class ForgeCraftingManager
             }
         }
         
-        CraftingManager.getInstance().getRecipeList().re
     }
 }
