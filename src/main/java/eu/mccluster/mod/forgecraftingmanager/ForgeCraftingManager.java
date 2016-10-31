@@ -87,7 +87,7 @@ public class ForgeCraftingManager
                 System.out.println("Found Recipe: " + output.getItem().getRegistryName());
             if (output != null) {
             	for (String result : forbiddenrecipes) {
-            		if (result.equalsIgnoreCase(output.getItem().getRegistryName())) {
+            		if (result.equalsIgnoreCase(output.getItem().getRegistryName().toString())) {
                     	System.out.println("Removing recipe " + output.getItem().getRegistryName());
                     	iterator.remove();
                     	CraftingManager.getInstance().getRecipeList().remove(recipe);
