@@ -76,12 +76,14 @@ public class ForgeCraftingManager
         
         Iterator<IRecipe> iterator = CraftingManager.getInstance().getRecipeList().iterator();
 
+        System.out.println("Searching for recipes...");
         while (iterator.hasNext())
         {
             IRecipe recipe = iterator.next();
             if (recipe == null)
              continue;
             ItemStack output = recipe.getRecipeOutput();
+            System.out.println("Found Recipe: " + output.getItem().getRegistryName());
             if (output != null && forbiddenrecipes.contains(output.getItem().getRegistryName()))
             	iterator.remove();
         }
