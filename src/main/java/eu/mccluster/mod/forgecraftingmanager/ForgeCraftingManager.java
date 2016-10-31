@@ -60,10 +60,10 @@ public class ForgeCraftingManager
         forbiddenrecipes.add("pixelmon:ruby_plate");
         forbiddenrecipes.add("pixelmon:ruby_legs");
         forbiddenrecipes.add("pixelmon:ruby_boots");
-        forbiddenrecipes.add("pixelmon:neo_plasmahelm");
-        forbiddenrecipes.add("pixelmon:neo_plasmaplate");
-        forbiddenrecipes.add("pixelmon:neo_plasmalegs");
-        forbiddenrecipes.add("pixelmon:neo_plasmaboots");
+        forbiddenrecipes.add("pixelmon:neo_plasma_helm");
+        forbiddenrecipes.add("pixelmon:neo_plasma_plate");
+        forbiddenrecipes.add("pixelmon:neo_plasma_legs");
+        forbiddenrecipes.add("pixelmon:neo_plasma_boots");
         forbiddenrecipes.add("pixelmon:plasma_helm");
         forbiddenrecipes.add("pixelmon:plasma_plate");
         forbiddenrecipes.add("pixelmon:plasma_legs");
@@ -85,8 +85,13 @@ public class ForgeCraftingManager
             ItemStack output = recipe.getRecipeOutput();
             if (output != null)
                 System.out.println("Found Recipe: " + output.getItem().getRegistryName());
-            if (output != null && forbiddenrecipes.contains(output.getItem().getRegistryName()))
+            if (output != null && forbiddenrecipes.contains(output.getItem().getRegistryName())) {
+            	System.out.println("Removing recipe " + output.getItem().getRegistryName());
             	iterator.remove();
+            	CraftingManager.getInstance().getRecipeList().remove(recipe);
+            }
         }
+        
+        CraftingManager.getInstance().getRecipeList().re
     }
 }
