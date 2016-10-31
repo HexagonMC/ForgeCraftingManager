@@ -34,44 +34,44 @@ public class ForgeCraftingManager
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
-        forbiddenrecipes.add("pixelmon:ThunderstoneHammer");
-        forbiddenrecipes.add("pixelmon:ThunderstonePickaxe");
-        forbiddenrecipes.add("pixelmon:ThunderstoneAxe");
-        forbiddenrecipes.add("pixelmon:ThunderstoneShovel");
-        forbiddenrecipes.add("pixelmon:ThunderstoneHoe");
-        forbiddenrecipes.add("pixelmon:ThunderstoneSword");
+        forbiddenrecipes.add("pixelmon:thunder_stone_hammer");
+        forbiddenrecipes.add("pixelmon:thunder_stone_pickaxe");
+        forbiddenrecipes.add("pixelmon:thunder_stone_axe");
+        forbiddenrecipes.add("pixelmon:thunder_stone_shovel");
+        forbiddenrecipes.add("pixelmon:thunder_stone_hoe");
+        forbiddenrecipes.add("pixelmon:thunder_stone_sword");
         
-        forbiddenrecipes.add("pixelmon:FirestoneHammer");
-        forbiddenrecipes.add("pixelmon:FirestonePickaxe");
-        forbiddenrecipes.add("pixelmon:FirestoneAxe");
-        forbiddenrecipes.add("pixelmon:FirestoneShovel");
-        forbiddenrecipes.add("pixelmon:FirestoneHoe");
-        forbiddenrecipes.add("pixelmon:FirestoneSword");
+        forbiddenrecipes.add("pixelmon:fire_stone_hammer");
+        forbiddenrecipes.add("pixelmon:fire_stone_pickaxe");
+        forbiddenrecipes.add("pixelmon:fire_stone_axe");
+        forbiddenrecipes.add("pixelmon:fire_stone_shovel");
+        forbiddenrecipes.add("pixelmon:fire_stone_hoe");
+        forbiddenrecipes.add("pixelmon:fire_stone_sword");
         
-        forbiddenrecipes.add("pixelmon:SapphireHelm");
-        forbiddenrecipes.add("pixelmon:SapphirePlate");
-        forbiddenrecipes.add("pixelmon:SapphireLegs");
-        forbiddenrecipes.add("pixelmon:SapphireBoots");
-        forbiddenrecipes.add("pixelmon:GalacticHelm");
-        forbiddenrecipes.add("pixelmon:GalacticPlate");
-        forbiddenrecipes.add("pixelmon:GalacticLegs");
-        forbiddenrecipes.add("pixelmon:GalacticBoots");
-        forbiddenrecipes.add("pixelmon:RubyHelm");
-        forbiddenrecipes.add("pixelmon:RubyPlate");
-        forbiddenrecipes.add("pixelmon:RubyLegs");
-        forbiddenrecipes.add("pixelmon:RubyBoots");
-        forbiddenrecipes.add("pixelmon:NeoPlasmaHelm");
-        forbiddenrecipes.add("pixelmon:NeoPlasmaPlate");
-        forbiddenrecipes.add("pixelmon:NeoPlasmaLegs");
-        forbiddenrecipes.add("pixelmon:NeoPlasmaBoots");
-        forbiddenrecipes.add("pixelmon:PlasmaHelm");
-        forbiddenrecipes.add("pixelmon:PlasmaPlate");
-        forbiddenrecipes.add("pixelmon:PlasmaLegs");
-        forbiddenrecipes.add("pixelmon:PlasmaBoots");
-        forbiddenrecipes.add("pixelmon:RocketHelm");
-        forbiddenrecipes.add("pixelmon:RocketPlate");
-        forbiddenrecipes.add("pixelmon:RocketLegs");
-        forbiddenrecipes.add("pixelmon:RocketBoots");
+        forbiddenrecipes.add("pixelmon:sapphire_helm");
+        forbiddenrecipes.add("pixelmon:sapphire_plate");
+        forbiddenrecipes.add("pixelmon:sapphire_legs");
+        forbiddenrecipes.add("pixelmon:sapphire_boots");
+        forbiddenrecipes.add("pixelmon:galactic_helm");
+        forbiddenrecipes.add("pixelmon:galactic_plate");
+        forbiddenrecipes.add("pixelmon:galactic_legs");
+        forbiddenrecipes.add("pixelmon:galactic_boots");
+        forbiddenrecipes.add("pixelmon:ruby_helm");
+        forbiddenrecipes.add("pixelmon:ruby_plate");
+        forbiddenrecipes.add("pixelmon:ruby_legs");
+        forbiddenrecipes.add("pixelmon:ruby_boots");
+        forbiddenrecipes.add("pixelmon:neo_plasmahelm");
+        forbiddenrecipes.add("pixelmon:neo_plasmaplate");
+        forbiddenrecipes.add("pixelmon:neo_plasmalegs");
+        forbiddenrecipes.add("pixelmon:neo_plasmaboots");
+        forbiddenrecipes.add("pixelmon:plasma_helm");
+        forbiddenrecipes.add("pixelmon:plasma_plate");
+        forbiddenrecipes.add("pixelmon:plasma_legs");
+        forbiddenrecipes.add("pixelmon:plasma_boots");
+        forbiddenrecipes.add("pixelmon:rocket_helm");
+        forbiddenrecipes.add("pixelmon:rocket_plate");
+        forbiddenrecipes.add("pixelmon:rocket_legs");
+        forbiddenrecipes.add("pixelmon:rocket_boots");
         
         
         Iterator<IRecipe> iterator = CraftingManager.getInstance().getRecipeList().iterator();
