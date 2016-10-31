@@ -85,10 +85,15 @@ public class ForgeCraftingManager
             ItemStack output = recipe.getRecipeOutput();
             if (output != null)
                 System.out.println("Found Recipe: " + output.getItem().getRegistryName());
-            if (output != null && forbiddenrecipes.contains(output.getItem().getRegistryName())) {
-            	System.out.println("Removing recipe " + output.getItem().getRegistryName());
-            	iterator.remove();
-            	CraftingManager.getInstance().getRecipeList().remove(recipe);
+            if (output != null) {
+            	for (String result : forbiddenrecipes) {
+            		if (result.equalsIgnoreCase(output.getItem().getRegistryName())) {
+                    	System.out.println("Removing recipe " + output.getItem().getRegistryName());
+                    	iterator.remove();
+                    	CraftingManager.getInstance().getRecipeList().remove(recipe);
+            		}
+            	}
+
             }
         }
         
