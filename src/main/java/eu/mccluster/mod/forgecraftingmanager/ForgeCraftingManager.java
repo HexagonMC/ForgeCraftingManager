@@ -83,7 +83,8 @@ public class ForgeCraftingManager
             if (recipe == null)
              continue;
             ItemStack output = recipe.getRecipeOutput();
-            System.out.println("Found Recipe: " + output.getItem().getRegistryName());
+            if (output != null)
+                System.out.println("Found Recipe: " + output.getItem().getRegistryName());
             if (output != null && forbiddenrecipes.contains(output.getItem().getRegistryName()))
             	iterator.remove();
         }
