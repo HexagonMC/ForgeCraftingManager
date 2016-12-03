@@ -72,7 +72,10 @@ public class ForgeCraftingManager
         forbiddenrecipes.add("pixelmon:rocket_plate");
         forbiddenrecipes.add("pixelmon:rocket_legs");
         forbiddenrecipes.add("pixelmon:rocket_boots");
-        
+        forbiddenrecipes.add("pixelmon:thunder_stone_helm");
+        forbiddenrecipes.add("pixelmon:thunder_stone_plate");
+        forbiddenrecipes.add("pixelmon:thunder_stone_legs");
+        forbiddenrecipes.add("pixelmon:thunder_stone_boots");
         
         Iterator<IRecipe> iterator = CraftingManager.getInstance().getRecipeList().iterator();
 
