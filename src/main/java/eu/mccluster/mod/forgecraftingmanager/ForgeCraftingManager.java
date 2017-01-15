@@ -7,9 +7,13 @@ import java.util.Iterator;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.entity.player.AnvilRepairEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 @Mod(
         name = ForgeCraftingManager.NAME,
@@ -29,7 +33,11 @@ public class ForgeCraftingManager
     
     private ArrayList<String> forbiddenrecipes = new ArrayList<String>();
 
-    
+    @Mod.EventHandler
+    public void preInit(FMLPreInitializationEvent event)
+    {
+    	MinecraftForge.EVENT_BUS.register(this);
+    }
     
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
@@ -93,9 +101,12 @@ public class ForgeCraftingManager
                     	CraftingManager.getInstance().getRecipeList().remove(recipe);
             		}
             	}
-
             }
         }
-        
+    }
+    
+    @SubscribeEvent
+    public void onAnviluseEvent(AnvilRepairEvent e) {
+    	e.setBreakChance(0);
     }
 }
