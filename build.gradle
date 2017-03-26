@@ -27,7 +27,7 @@ group= "eu.mccluster.mod.forgecraftingmanager" // http://maven.apache.org/guides
 archivesBaseName = "ForgeCraftingManager"
 
 minecraft {
-    version = "1.10.2-12.18.1.2013"
+    version = "1.10.2-12.18.3.2254"
     runDir = "run"
     
     // the mappings can be changed at any time, and must be in the following format.
@@ -74,7 +74,7 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
-    provided 'org.spongepowered:spongeapi:5.1.0-SNAPSHOT'
+    provided 'org.spongepowered:spongeapi:5.2.0-SNAPSHOT'
 }
 
 processResources
