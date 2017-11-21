@@ -2,14 +2,16 @@ package eu.mccluster.mod.forgecraftingmanager;
 
 
 import java.util.ArrayList;
-import java.util.Iterator;
+
+import com.google.common.collect.Lists;
 
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
+import net.minecraftforge.registries.ForgeRegistry;
 
 @Mod(
         name = ForgeCraftingManager.NAME,
@@ -17,7 +19,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
         version = ForgeCraftingManager.VERSION,
         dependencies = "required-after:pixelmon;required-after:sponge",
         acceptableRemoteVersions = "*",
-        acceptedMinecraftVersions = "[1.10.2]")
+        acceptedMinecraftVersions = "[1.12.2]")
 public class ForgeCraftingManager
 {
     public static final String  NAME    = "ForgeCraftingManager";
@@ -80,23 +82,18 @@ public class ForgeCraftingManager
         forbiddenrecipes.add("pixelmon:rocket_legs");
         forbiddenrecipes.add("pixelmon:rocket_boots");
         
-        Iterator<IRecipe> iterator = CraftingManager.getInstance().getRecipeList().iterator();
-
-        while (iterator.hasNext())
-        {
-            IRecipe recipe = iterator.next();
-            if (recipe == null)
-             continue;
-            ItemStack output = recipe.getRecipeOutput();
-            if (output != null)
-            if (output != null) {
-            	for (String result : forbiddenrecipes) {
-            		if (result.equalsIgnoreCase(output.getItem().getRegistryName().toString())) {
-                    	iterator.remove();
-                    	CraftingManager.getInstance().getRecipeList().remove(recipe);
-            		}
-            	}
+        ForgeRegistry<IRecipe> recipeRegistry = (ForgeRegistry<IRecipe>)ForgeRegistries.RECIPES;
+        ArrayList<IRecipe> recipes = Lists.newArrayList(recipeRegistry.getValues());
+        
+        for (IRecipe r : recipes) {
+            ItemStack output = r.getRecipeOutput();
+               if (output != null) {
+                   for (String result : forbiddenrecipes) {
+                       if (result.equalsIgnoreCase(output.getItem().getRegistryName().toString())) {
+                           recipeRegistry.remove(r.getRegistryName());
+                       }
+                }
             }
-        }
+       }
     }
 }
