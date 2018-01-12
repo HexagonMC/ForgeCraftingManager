@@ -3,7 +3,7 @@ package eu.mccluster.mod.forgecraftingmanager;
 
 import java.util.ArrayList;
 
-import com.google.common.collect.Lists;
+import com.google.common.collect.ImmutableList;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
@@ -83,7 +83,7 @@ public class ForgeCraftingManager
         forbiddenrecipes.add("pixelmon:rocket_boots");
         
         ForgeRegistry<IRecipe> recipeRegistry = (ForgeRegistry<IRecipe>)ForgeRegistries.RECIPES;
-        ArrayList<IRecipe> recipes = Lists.newArrayList(recipeRegistry.getValues());
+        ImmutableList<IRecipe> recipes = ImmutableList.copyOf(recipeRegistry.getValues());
         
         for (IRecipe r : recipes) {
             ItemStack output = r.getRecipeOutput();
