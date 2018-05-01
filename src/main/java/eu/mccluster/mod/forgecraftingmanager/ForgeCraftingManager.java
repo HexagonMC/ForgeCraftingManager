@@ -91,6 +91,7 @@ public class ForgeCraftingManager
                    for (String result : forbiddenrecipes) {
                        if (result.equalsIgnoreCase(output.getItem().getRegistryName().toString())) {
                            recipeRegistry.remove(r.getRegistryName());
+                           recipeRegistry.register(EmptyRecipe.from(r));
                        }
                 }
             }
