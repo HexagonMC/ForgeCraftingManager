@@ -24,7 +24,7 @@ public class ForgeCraftingManager
 {
     public static final String  NAME    = "ForgeCraftingManager";
     public static final String  MODID   = "forgecraftingmanager";
-    public static final String  VERSION = "1.0";
+    public static final String  VERSION = "1.0.1";
     
     @Instance(MODID)
     public static ForgeCraftingManager INSTANCE;
@@ -44,6 +44,8 @@ public class ForgeCraftingManager
         //forbiddenrecipes.add("pixelmon:thunder_stone_plate");
         //forbiddenrecipes.add("pixelmon:thunder_stone_legs");
         forbiddenrecipes.add("pixelmon:thunder_stone_boots");
+        
+        forbiddenrecipes.add("pixelmon:dawn_stone_boots");
         
         forbiddenrecipes.add("pixelmon:fire_stone_hammer");
         forbiddenrecipes.add("pixelmon:fire_stone_pickaxe");
