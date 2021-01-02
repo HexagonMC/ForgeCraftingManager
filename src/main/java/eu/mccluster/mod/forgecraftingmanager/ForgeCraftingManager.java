@@ -24,12 +24,12 @@ public class ForgeCraftingManager
 {
     public static final String  NAME    = "ForgeCraftingManager";
     public static final String  MODID   = "forgecraftingmanager";
-    public static final String  VERSION = "1.0.1";
+    public static final String  VERSION = "1.1.0";
     
     @Instance(MODID)
     public static ForgeCraftingManager INSTANCE;
     
-    private ArrayList<String> forbiddenrecipes = new ArrayList<String>();
+    private final ArrayList<String> forbiddenRecipes = new ArrayList<>();
     
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
@@ -43,16 +43,16 @@ public class ForgeCraftingManager
         //forbiddenrecipes.add("pixelmon:thunder_stone_helm");
         //forbiddenrecipes.add("pixelmon:thunder_stone_plate");
         //forbiddenrecipes.add("pixelmon:thunder_stone_legs");
-        forbiddenrecipes.add("pixelmon:thunder_stone_boots");
-        
-        forbiddenrecipes.add("pixelmon:dawn_stone_boots");
-        
-        forbiddenrecipes.add("pixelmon:fire_stone_hammer");
-        forbiddenrecipes.add("pixelmon:fire_stone_pickaxe");
-        forbiddenrecipes.add("pixelmon:fire_stone_axe");
-        forbiddenrecipes.add("pixelmon:fire_stone_shovel");
-        forbiddenrecipes.add("pixelmon:fire_stone_hoe");
-        forbiddenrecipes.add("pixelmon:fire_stone_sword");
+        forbiddenRecipes.add("pixelmon:thunder_stone_boots");
+
+        forbiddenRecipes.add("pixelmon:dawn_stone_boots");
+
+        forbiddenRecipes.add("pixelmon:fire_stone_hammer");
+        forbiddenRecipes.add("pixelmon:fire_stone_pickaxe");
+        forbiddenRecipes.add("pixelmon:fire_stone_axe");
+        forbiddenRecipes.add("pixelmon:fire_stone_shovel");
+        forbiddenRecipes.add("pixelmon:fire_stone_hoe");
+        forbiddenRecipes.add("pixelmon:fire_stone_sword");
         
         //forbiddenrecipes.add("pixelmon:sapphire_helm");
         //forbiddenrecipes.add("pixelmon:sapphire_plate");
@@ -78,11 +78,11 @@ public class ForgeCraftingManager
         //forbiddenrecipes.add("pixelmon:plasma_plate");
         //forbiddenrecipes.add("pixelmon:plasma_legs");
         //forbiddenrecipes.add("pixelmon:plasma_boots");
-        
-        forbiddenrecipes.add("pixelmon:rocket_helm");
-        forbiddenrecipes.add("pixelmon:rocket_plate");
-        forbiddenrecipes.add("pixelmon:rocket_legs");
-        forbiddenrecipes.add("pixelmon:rocket_boots");
+
+        forbiddenRecipes.add("pixelmon:rocket_helm");
+        forbiddenRecipes.add("pixelmon:rocket_plate");
+        forbiddenRecipes.add("pixelmon:rocket_legs");
+        forbiddenRecipes.add("pixelmon:rocket_boots");
         
         ForgeRegistry<IRecipe> recipeRegistry = (ForgeRegistry<IRecipe>)ForgeRegistries.RECIPES;
         ImmutableList<IRecipe> recipes = ImmutableList.copyOf(recipeRegistry.getValues());
@@ -90,7 +90,7 @@ public class ForgeCraftingManager
         for (IRecipe r : recipes) {
             ItemStack output = r.getRecipeOutput();
                if (output != null) {
-                   for (String result : forbiddenrecipes) {
+                   for (String result : forbiddenRecipes) {
                        if (result.equalsIgnoreCase(output.getItem().getRegistryName().toString())) {
                            recipeRegistry.remove(r.getRegistryName());
                            recipeRegistry.register(EmptyRecipe.from(r));
